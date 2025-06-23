@@ -11,36 +11,36 @@ Project Structure
 iac-ml-sagemaker/
 
 -->  model/  
-   ------> model.tar.gz       # pre-trained model archive (e.g., XGBoost)  
+   ======> model.tar.gz       # pre-trained model archive (e.g., XGBoost)  
 --> scripts/  
-   ------> inference.py       # Entry point script for inference (SageMaker-compatible)  
+   ======> inference.py       # Entry point script for inference (SageMaker-compatible)  
 --> terraform/  
-   ------> main.tf            # Terraform configuration for SageMaker & S3  
-   ------> outputs.tf         # Output values  
-   ------> provider.tf        # AWS provider & region  
-   ------> variables.tf       # Input variables (bucket name, role ARN,etc.)  
+   ======> main.tf            # Terraform configuration for SageMaker & S3  
+   ======> outputs.tf         # Output values  
+   ======> provider.tf        # AWS provider & region  
+   ======> variables.tf       # Input variables (bucket name, role ARN,etc.)  
 --> requirements.txt       # Python dependencies  
 --> README.md              # Project documentation  
 
 Prerequisites
 * AWS Account with SageMaker permissions
 * An IAM Role with AmazonSageMakerFullAccess, AmazonS3FullAccess
-* Terraform installed (? v1.3)
+* Terraform installed (v1.3)
 * AWS CLI configured with your credentials:
 * aws configure
 
  Model Artifacts
 --> model.tar.gz inside the model/ folder should contain:
-    --> Serialized model file (e.g., xgboost-model)
-    --> Optional: code/inference.py script
+    ======> Serialized model file (e.g., xgboost-model)
+    ======> Optional: code/inference.py script
 
 If we are using XGBoost:
 
 model/
---> model.tar.gz
-    ------> xgboost-model
-    ------>code/
-        ------> inference.py
+--> model.tar.gz  
+    ------> xgboost-model  
+    ------>code/  
+        ------> inference.py  
 How to Use
 
 1. Set AWS Credentials
