@@ -3,24 +3,24 @@ IaC Template for ML Deployment (Terraform + AWS SageMaker)
 This project provides a ready-to-use Infrastructure as Code (IaC) template using Terraform to deploy a machine learning model to Amazon 
 SageMaker. It automates:
 
-1. Uploading our  ML model to S3 \
-2.  Creating a SageMaker model  \
-3.  Deploying it as an endpoint \
+1. Uploading our  ML model to S3  
+2.  Creating a SageMaker model  
+3.  Deploying it as an endpoint  
 
 Project Structure
 iac-ml-sagemaker/
 
--->  model/ 
-   ------> model.tar.gz       # pre-trained model archive (e.g., XGBoost)
---> scripts/
-   ------> inference.py       # Entry point script for inference (SageMaker-compatible)
---> terraform/
-   ------> main.tf            # Terraform configuration for SageMaker & S3
-   ------> outputs.tf         # Output values
-   ------> provider.tf        # AWS provider & region
-   ------> variables.tf       # Input variables (bucket name, role ARN,etc.)
---> requirements.txt       # Python dependencies
---> README.md              # Project documentation
+-->  model/  
+   ------> model.tar.gz       # pre-trained model archive (e.g., XGBoost)  
+--> scripts/  
+   ------> inference.py       # Entry point script for inference (SageMaker-compatible)  
+--> terraform/  
+   ------> main.tf            # Terraform configuration for SageMaker & S3  
+   ------> outputs.tf         # Output values  
+   ------> provider.tf        # AWS provider & region  
+   ------> variables.tf       # Input variables (bucket name, role ARN,etc.)  
+--> requirements.txt       # Python dependencies  
+--> README.md              # Project documentation  
 
 Prerequisites
 * AWS Account with SageMaker permissions
