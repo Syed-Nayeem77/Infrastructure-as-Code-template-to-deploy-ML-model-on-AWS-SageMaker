@@ -1,4 +1,4 @@
-IaC Template for ML Deployment (Terraform + AWS SageMaker)  
+“Infrastructure as Code template to deploy ML model on AWS SageMaker”(Terraform + AWS SageMaker)  
 
 This project provides a ready-to-use Infrastructure as Code (IaC) template using Terraform to deploy a machine learning model to Amazon  
 SageMaker. It automates:  
