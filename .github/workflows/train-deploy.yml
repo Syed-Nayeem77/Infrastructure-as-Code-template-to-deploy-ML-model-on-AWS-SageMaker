@@ -1,0 +1,30 @@
+name: Train and Deploy ML Model
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  train-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install Dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Run Training Script
+      run: |
+        python scripts/train_model.py
+
+    - name: Deploy to SageMaker
+      run: |
+        python scripts/deploy_model.py
